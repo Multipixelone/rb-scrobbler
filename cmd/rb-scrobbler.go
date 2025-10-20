@@ -34,6 +34,9 @@ Automatically ("keep", "delete" or "delete-on-success") at end of program`)
 		*colours = false
 	}
 
+	API_KEY := os.Getenv("API_KEY")
+	API_SECRET := os.Getenv("API_SECRET")
+
 	fm := session.NewClient(API_KEY, API_SECRET)
 
 	/* First time Authentication */
