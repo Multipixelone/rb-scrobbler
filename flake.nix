@@ -45,6 +45,12 @@
             # in the Nix store.
             src = ./.;
 
+            postPatch = ''
+              # Allow older go versions
+              substituteInPlace go.mod \
+                --replace-fail "go 1.25.2" "go ${pkgs.go.version}"
+            '';
+
             postInstall = ''
               install -m 755 $out/bin/cmd $out/bin/rb-scrobbler
             '';
