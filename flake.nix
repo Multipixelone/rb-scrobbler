@@ -56,6 +56,7 @@
             '';
 
             vendorHash = "sha256-e9pUa772JeASL1EfzH0HWuuBLV00VcQY9Q42gQ2lSKQ=";
+            meta.mainProgram = "rb-scrobbler";
           };
         }
       );
